@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="css/styles.css" landerlab-styles=""><link rel="stylesheet" href="css/swiper-bundle.min.css"><script async="" src="js/gtm.js"></script><script async="" src="js/fbevents.js"></script><script src="js/swiper-bundle.min.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&amp;display=swap" rel="stylesheet"><meta name="robots" content="noindex"><meta name="description" content=""><meta name="keywords" content=""><script>var phoneNumberButtonConversion = false;
+      function callButtonClicked() {
+        if (phoneNumberButtonConversion) {
+          return;
+        }
+        console.log("call-button clicked");
+        phoneNumberButtonConversion = true;
+        fbq('track', 'Lead');
+      }</script><style>body,
+      html {
+        min-height: 100%;
+        margin: 0;
+        background-color: #004b75;
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+      }
+      .form-wrapper {
+        background-color: white;
+        min-height: 63vh;
+        border-radius: 5px;
+        max-width: 100vw;
+        box-sizing: border-box;
+        /* Added this line */
+        padding-bottom: 10vh;
+      }
+      /* BUTTONS */
+      .button-positive {
+        background-color: #004b75;
+        color: white;
+        border-radius: 5px;
+        padding: 18px;
+        text-align: center;
+        font-weight: medium;
+        font-size: 29px;
+        cursor: pointer;
+      }
+      .button-positive:hover {
+        background-color: #003452;
+      }
+      /** Button positive large **/
+      .button-positive-large {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 40px 30px;
+        background-color: #004b75;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+      .button-positive-large:hover {
+        background-color: #003452;
+      }
+      .button-positive-large div:first-child {
+        font-size: 33px;
+        margin-right: 10px;
+      }
+      .button-positive-large div:last-child {
+        font-size: 30px;
+        font-weight: bold;
+        flex-grow: 1;
+        text-align: center;
+      }
+      /** Button positive call **/
+      .button-positive-call {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 23px 30px;
+        background-color: #004b75;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+      .button-positive-call:hover {
+        background-color: #003452;
+      }
+      .button-positive-call div:first-child {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+      .button-positive-call div:last-child {
+        font-size: 23px;
+        font-weight: bold;
+        flex-grow: 1;
+        text-align: center;
+      }
+      /** Button negative **/
+      .button-negative {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 30px;
+        background-color: #fff;
+        border: 2px solid #004b75;
+        color: #004b75;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+      .button-negative:hover {
+        background-color: #003452;
+        color: white;
+      }
+      .button-negative div:first-child {
+        font-size: 33px;
+        margin-right: 10px;
+      }
+      .button-negative div:last-child {
+        font-size: 30px;
+        font-weight: bold;
+        flex-grow: 1;
+        text-align: center;
+      }
+      /** other styles **/
+      .min-full-height {
+        min-height: 89vh;
+      }
+      .content {
+        background-image: url("images/bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        font-size: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .title {
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        color: white;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .breaking-and-live {
+        display: flex;
+        justify-content: space-between;
+      }
+      .persistent-header {
+        padding: 20px 20px 0px;
+      }
+      .swiper-padding {
+        padding: 10px;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide-content {
+        width: calc(100% - 20px);
+        /* subtracting 20px padding from each side */
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .count {
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+      }
+      .question {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 35px;
+        list-style: 28px;
+      }
+      .explainer {
+        font-size: 23px;
+      }
+      @keyframes throb {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .throbbing {
+        display: inline-block;
+        color: red;
+        animation: throb 1.5s infinite;
+      }
+      /** Desktop styling for slider **/
+      @media (min-width: 600px) {
+        .title {
+          padding-bottom: 150px;
+        }
+        .swiper-container {
+          height: 500px;
+        }
+        .swiper-slide {
+          height: 100%;
+        }
+        .swiper-padding {
+          padding: 0px;
+        }
+        .swiper-slide {
+          visibility: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .swiper-slide-active {
+          visibility: visible;
+        }
+        .slide-content {
+          width: calc(100% - 30px);
+          /* subtracting 20px padding from each side */
+          padding: 15px;
+          box-sizing: border-box;
+        }
+        .count {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        .question {
+          font-size: 40px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .explainer {
+          font-size: 30px;
+        }
+      }</style><script>let form_answers = {
+        earns_less_than_50k_per_year: "",
+        has_medicaid_or_medicare: "",
+        age_range: "",
+        angle: "subsidy",
+      };
+      function addTagsToRingba(tags_to_add) {
+        for (const [key, value] of Object.entries(tags_to_add)) {
+          (window._rgba_tags = window._rgba_tags || []).push({
+            [key]: value }
+                                                            );
+        }
+      }</script><script>const url_weight = Math.floor(Math.random() * 10) + 1;
+      // Assign a random value from 1 to 10
+      function addDataToURL(data) {
+        // Ensure url_weight is included in the data object
+        data['weight'] = url_weight;
+        // Check if URL has query parameters
+        let url = new URL(window.location.href);
+        let searchParams = new URLSearchParams(window.location.search);
+        // Append new key-value pairs to the URL with 'url_' prepended to each key
+        for (let key in data) {
+          if (data.hasOwnProperty(key)) {
+            searchParams.set('url_' + key, data[key]);
+          }
+        }
+        // Use history API to update the URL without refreshing the page
+        window.history.replaceState({
+        }
+                                    , '', url.pathname + '?' + searchParams.toString());
+      }</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({
+          'gtm.start':
+          new Date().getTime(),event:'gtm.js'}
+                 );
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      }
+            )(window,document,'script','dataLayer','GTM-KZJBC3B');</script><!-- End Google Tag Manager --><title>Subsidy Expiring Soon</title><link rel="icon" href="images/favicon.png" type="image/x-icon">
+  
+  <script>
+  function setCookie(name, value, path = '/') {
+    var date = new Date();
+    var expires = '';
+
+    if (name !== 'llRequestData') {
+      date.setTime(date.getTime() + 2592000000);
+      expires = "; expires=" + date.toUTCString();
+    }
+
+    document.cookie = name + "=" + value + expires + "; path=" + path;
+  }
+
+  function getCookie(name) {
+    const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+    try {
+      return JSON.parse(cookieValue);
+    } catch (error) {
+      return cookieValue;
+    }
+  }
+
+
+  setCookie('llRequestData', JSON.stringify({"country":"Netherlands","city":"Amsterdam","region":"North Holland","postalCode":"1012","browser":"Safari","operatingSystem":"Mac OS","device":"Desktop"}));
+  const variantId = 'e46709aa58ba51019b4e6c1b23d9ae03'
+  const randomVariant = 'true'
+
+  if(variantId !=='undefined' && randomVariant !== 'undefined'){
+    if (!getCookie('landerlab-abtest-variantId') || true) {
+      console.log('Setting AB Test cookie');
+      setCookie('landerlab-abtest-variantId', 'e46709aa58ba51019b4e6c1b23d9ae03');
+    }
+  }
+  </script>
+</head>
+  <body class="">
+    
+  <script landerlab-script="" landerlab-global-variables="">window.LL_VARIANT_ID=7871;window.LL_LANDER_ID=7620;window.LL_USER_ID=2204;</script>
+
+    
+  
+
+    
+  <script landerlab-script="" landerlab-conversion-script="">
+    function replaceNoScript(){let e=document.querySelector("noscript[landerlab-pixel]");if(e){let t=e.textContent,n=t.match(/src="(.*)"/);if(n&&n.length>=2){let a=document.createElement("script");a.src=n[1];let c=e.parentNode;e.remove(),c.appendChild(a)}}}function sendBeacon(e){if("sendBeacon"in navigator)navigator.sendBeacon(e);else{let t=new XMLHttpRequest;t.open("POST",e,!1),t.send()}}function reportConversion(a){sendBeacon(`https://track.landerlab.io/cf/cv?txid=${Date.now()}&ct=${a}`)}function updateLinks(){replaceNoScript();document.querySelectorAll("[ll-conversion-track]").forEach(e=>{e.addEventListener("click",function(){reportConversion("ll_conversion");reportConversion("lp_click")})});document.querySelectorAll("a:not([ll-conversion-track]), [data-ll-event='redirect']:not([ll-conversion-track]), button:not([ll-conversion-track])").forEach(e=>{e.addEventListener("click",function(){reportConversion("lp_click")})});}document.addEventListener("DOMContentLoaded",updateLinks);
+  </script>
+
+    
+    
+    <style>
+    *{max-width:unset;}#i4bt{display:none;visibility:hidden;}#i21o{height:36px;}#ies6g{height:18px;}#ijk23{margin-bottom:10px;}#iluyf{margin-bottom:16px;}#it5yw{margin-bottom:20px;}#ik0dy{position:absolute;width:65px;right:0px;margin-top:-86px;margin-right:26px;}#i6zte{width:100%;}#it8zz{width:100%;}#i6faq{margin-bottom:20px;}#iub1x{position:absolute;width:65px;right:0px;margin-top:-86px;margin-right:26px;}#i0uxe{width:100%;}#i8cgh{margin-bottom:20px;}#ibmup{margin-bottom:20px;}#ir4vr{position:absolute;width:65px;right:0px;margin-top:-86px;margin-right:26px;}#i23nl{width:100%;}#i8c0j{margin-bottom:20px;}#iqw0q{margin-bottom:67px;}#ieaf8{margin-bottom:20px;}#iig4a{position:absolute;width:65px;right:0px;margin-top:-86px;margin-right:26px;}#iubxj{width:100%;}#iq8pq{margin-bottom:20px;}#izbdhu{width:100%;}#idifxj{width:100%;}#iwrldt{font-size:22px;padding-top:19px;padding-right:4px;padding-bottom:19px;padding-left:4px;}#i2kua4{text-decoration-line:underline;}#ift96a{text-decoration-line:none;}#io4r6y{margin-bottom:20px;}#i7wwe9{width:29px;}#ip34af{text-decoration-line:none;}#imlgu8{position:absolute;width:65px;right:0px;margin-top:-68px;margin-right:14px;}#i5fkva{width:100%;}#ixsm7f{margin-bottom:20px;}#iswias{color:red;}#idtuk6{font-size:17px;}#ixonra{color:green;}#ia4jxm{width:100%;margin-top:20px;}#ip0o2k{width:65%;}#ih3p8h{margin-top:-2px;}#ijqiwh{max-width:600px;background-color:rgb(255, 0, 0);margin-top:0px;margin-right:auto;margin-bottom:0px;margin-left:auto;}#i0sz1d{padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;text-align:center;}#i99kfz{color:rgb(71, 0, 0);}#i4nzdh{color:rgb(71, 0, 0);}#i8cfvy{color:rgb(71, 0, 0);}#i99xbf{text-align:center;font-size:15px;}#imwp{display:none;visibility:hidden;}@media (max-width: 576px){#io3q4b{font-size:8px;color:#0000005E;}}
+    </style>
+    <noscript id="ity3" data-gjs-type="default">
+    </noscript><iframe id="imwp" data-gjs-type="ll-iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-KZJBC3B" height="0" width="0"></iframe><!-- End Google Tag Manager (noscript) --><noscript id="iurd" data-gjs-type="default">
+    </noscript><iframe id="i4bt" data-gjs-type="ll-iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-WCW4ZF79" height="0" width="0"></iframe><!-- End Google Tag Manager (noscript) --><!-- Min 100vh --><div id="ir66" data-gjs-type="div" class="min-full-height content"><div id="imzo" data-gjs-type="div" class="persistent-header"><div id="iymg" data-gjs-type="div" class="breaking-and-live"><div id="io9l" data-gjs-type="div" class=""><img id="i21o" data-gjs-type="image" src="images/breaking-news.png" alt="Breaking news" class=""></div><div id="i93wy" data-gjs-type="div" class=""><img id="ies6g" data-gjs-type="image" src="images/live.gif" alt="Live"></div></div><div id="ilw88" data-gjs-type="div" class="title"><span id="ijk5h" data-gjs-type="text">
+          </span></div></div><!-- Form Area--><div id="i5ki7" data-gjs-type="div" class="form"><img id="it5ou9" data-gjs-type="image" src="1c59440a-76f6-4e71-bb19-a160ecbae6d6" alt="Image" class="ll-image"><div id="ij8dc" data-gjs-type="div" class="swiper-padding"><div id="ixjur" data-gjs-type="div" class="swiper-container"><div id="if34k" data-gjs-type="div" class="swiper-wrapper"><!-- Page 1--><div id="iqdmj" data-gjs-type="div" class="swiper-slide"><div id="page-1" data-gjs-type="div" class="form-wrapper slide-content"><div id="ijk23" data-gjs-type="div" class="question"><span id="ixgi3" data-gjs-type="text">
+                    </span></div><img id="ik1lmy" data-gjs-type="image" src="a57a5ba3-9057-4d41-8589-fa6a1effb3bd" alt="Image" class="ll-image"><div id="iluyf" data-gjs-type="div"><span id="icj6u" data-gjs-type="text" aria-readonly="false" spellcheck="false" class="">Haz Clic Abajo Para Reclamar.</span></div><div id="it5yw" data-gjs-type="div" class="button-positive-large next-button"><div id="i2qac" data-gjs-type="div" class=""><span id="i6pta" data-gjs-type="text" class="">Reclama Ahora</span></div></div><div id="ik0dy" data-gjs-type="div" class="next-button"><img id="i6zte" data-gjs-type="image" src="images/tap.gif"></div><div id="ip3kj" data-gjs-type="div" class=""><img id="it8zz" data-gjs-type="image" src="images/check-8400.jpg" class=""></div></div></div><!-- Page 2--><div id="i255q" data-gjs-type="div" class="swiper-slide"><div id="page-2" data-gjs-type="div" class="form-wrapper slide-content"><div id="i8xth" data-gjs-type="div" class="count"><span id="i9onb" data-gjs-type="text">1 of 3</span></div><div id="ifh77" data-gjs-type="div" class="question"><span id="icolf" data-gjs-type="text">
+                      ¿Debe usted $10,000 o más en deudas de tarjetas de crédito?
+                    </span></div><div id="i6faq" data-gjs-type="div" class="button-positive-large next-button"><!-- Check Icon --><svg id="izlbn" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="ivrnp" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5">
+                      </path></svg><!-- / Check Icon --><div id="i5o9e" data-gjs-type="div"><span id="iqoeh" data-gjs-type="text">Sí</span></div></div><div id="iub1x" data-gjs-type="div" class="next-button"><img id="i0uxe" data-gjs-type="image" src="images/tap.gif"></div><div id="i8cgh" data-gjs-type="div" class="button-negative next-button"><!-- X Icon --><svg id="ir03c" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="ir2n4" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                      </path></svg><!-- / X Icon --><div id="in35o" data-gjs-type="div"><span id="i3w5l" data-gjs-type="text">No</span></div></div><div id="i0jmf" data-gjs-type="div" class="explainer"><span id="i47bp" data-gjs-type="text">
+                      Debe deber $10,000 o más para calificar.
+                    </span></div></div></div><!-- Page 3--><div id="i5cwu" data-gjs-type="div" class="swiper-slide"><div id="page-3" data-gjs-type="div" class="form-wrapper slide-content"><div id="ihmzl" data-gjs-type="div" class="count"><span id="i5lfq" data-gjs-type="text">2 of 3</span></div><div id="itgkk" data-gjs-type="div" class="question"><span id="igz9j" data-gjs-type="text">¿Está usted empleado?</span></div><div id="ibmup" data-gjs-type="div" class="button-positive-large next-button"><!-- Check Icon --><svg id="iipgn" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="iwsn8" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5">
+                      </path></svg><!-- / Check Icon --><div id="i9o24" data-gjs-type="div"><span id="i41ak" data-gjs-type="text">Si</span></div></div><div id="ir4vr" data-gjs-type="div" class="next-button"><img id="i23nl" data-gjs-type="image" src="images/tap.gif"></div><div id="i8c0j" data-gjs-type="div" class="button-negative next-button"><!-- X Icon --><svg id="iu8ol" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="iniud" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                      </path></svg><!-- / X Icon --><div id="i00eh" data-gjs-type="div"><span id="iv25s" data-gjs-type="text">No</span></div></div><div id="ixwnl" data-gjs-type="div" class="explainer"><span id="ix5bf" data-gjs-type="text">
+                      Para calificar, debe estar empleado.
+                    </span></div></div></div><!-- Page 4--><div id="i9bse" data-gjs-type="div" class="swiper-slide"><div id="page-4" data-gjs-type="div" class="form-wrapper slide-content"><div id="iw7um" data-gjs-type="div" class="count"><span id="injqrv" data-gjs-type="text">¡Última pregunta!</span></div><div id="iqw0q" data-gjs-type="div" class="question"><span id="igiy4i" data-gjs-type="text">
+                      ¿Es usted residente legal de Estados Unidos?
+                    </span></div><div id="ieaf8" data-gjs-type="div" class="button-positive-large next-button"><!-- Check Icon --><svg id="iql26" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="ia752" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5">
+                      </path></svg><!-- / Check Icon --><div id="i883m" data-gjs-type="div"><span id="i1f1ba" data-gjs-type="text">Si</span></div></div><div id="iig4a" data-gjs-type="div" class="next-button"><img id="iubxj" data-gjs-type="image" src="images/tap.gif"></div><div id="iq8pq" data-gjs-type="div" class="button-negative next-button"><!-- X Icon --><svg id="ipqcdi" data-gjs-type="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" width="33px" height="33px" class="w-6 h-6"><path id="igxsz3" data-gjs-type="svg-in" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                      </path></svg><!-- / X Icon --><div id="ixvnws" data-gjs-type="div"><span id="ikqxdm" data-gjs-type="text">No</span></div></div><div id="ib5ljo" data-gjs-type="div" class="explainer"><span id="i4qomc" data-gjs-type="text">
+                      Debe ser residente legal de Estados Unidos para aprovechar este programa.
+                    </span></div></div></div><!-- Page 5 (Last page)--><div id="iqfozp" data-gjs-type="div" class="swiper-slide"><div id="page-5" data-gjs-type="div" class="form-wrapper slide-content"><div id="izbdhu" data-gjs-type="div"><img id="idifxj" data-gjs-type="image" src="images/congrats.png" alt="Congratulations!"></div><div id="iwrldt" data-gjs-type="div"><span id="iyb66k" data-gjs-type="text">
+                      ¡Preclasificas! Llama de inmediato para reclamar tu
+                    </span><strong id="i2kua4" data-gjs-type="text">Alivio de la deuda</strong><span id="irsmyb" data-gjs-type="text">
+                      de hasta el 100%. amp; </span></div><!-- C2C Button--><a id="ift96a" data-gjs-type="link" href="tel:+18553050321"><div id="io4r6y" data-gjs-type="div" class="button-positive-call"><div id="ik3kbf" data-gjs-type="div"><img id="i7wwe9" data-gjs-type="image" src="images/phone.png"></div><div id="it7yg7" data-gjs-type="div"><span id="i8asma" data-gjs-type="text">Haz Clic para Llamar Ahora</span></div></div></a><a id="ip34af" data-gjs-type="link" href="tel:+18553050321"><div id="imlgu8" data-gjs-type="div" class="next-button"><img id="i5fkva" data-gjs-type="image" src="images/tap.gif"></div></a><div id="ixsm7f" data-gjs-type="div"><a id="iswias" data-gjs-type="link" href="
+                                                                               +18553050321">
+                      Llama Ahora: (855) 305-0321
+                    </a></div><!-- congrats page footer content--><div id="idtuk6" data-gjs-type="div"><span id="ibq4sy" data-gjs-type="text">
+                      Tiempo de Espera en Vivo:
+                    </span><strong id="ixonra" data-gjs-type="text" class="throbbing">0</strong><span id="ilwiq8" data-gjs-type="text">
+                      minutes
+                    </span><br id="ivfyej" data-gjs-type="default"><br id="imyd8r" data-gjs-type="default"><span id="ilwj8j" data-gjs-type="text">
+                      Agentes Disponibles: </span><strong id="igxu54" data-gjs-type="text" class="throbbing">4</strong></div><div id="ia4jxm" data-gjs-type="div"><img id="ip0o2k" data-gjs-type="image" src="images/whitehouse.png"></div></div></div></div></div></div></div><!-- / Form Area --></div><!-- / Min 100vh --><!-- Footer --><div id="ih3p8h" data-gjs-type="div"><div id="ijqiwh" data-gjs-type="div"><div id="i0sz1d" data-gjs-type="div"><div id="i29k9o" data-gjs-type="div" class="footer"><div id="icl0dl" data-gjs-type="custom-code"><div class="powr-image-carousel" id="c50b9c25_1706911348"></div><script src="js/powr.js"></script></div><div id="idd1ia" data-gjs-type="div" class="ll-text-block"><p id="i544gd" data-gjs-type="text" class="" aria-readonly="false" spellcheck="false"></p><p id="io3q4b" data-gjs-type="text" class="ll-default-text" aria-readonly="false" spellcheck="false">This is an advertisement and not an actual news article or blog.<br>
+Please note that this website and its depicted stories are for illustrative purposes, representing what some have achieved with these products. While based on a true story, the content has been altered in various ways, including the narrative, photos, and comments. Do not interpret any page on this site as a factual account. The outcomes mentioned, though possible for some, may not reflect what you can achieve following the same routine. This site merely shows what could be possible with this information, and the story presented should not be viewed as a literal account.<br>
+This site is not a part of Google, YouTube or Alphabet Inc. This site is not endorsed by Google or Youtube in any way.<br>
+This site is not a part of Facebook. This site is not endorsed by Facebook in any way.</p></div><br id="ibel77" data-gjs-type="default"><div id="id8gjx" data-gjs-type="div"><a id="i99kfz" data-gjs-type="link" href="https://reliefconnection.com/privacy.php">Privacy Policy</a><span id="ivqaob" data-gjs-type="text">
+                |
+              </span><a id="i4nzdh" data-gjs-type="link" href="https://reliefconnection.com/terms.php" class="">Terms of Service</a><span id="igce8w" data-gjs-type="text">
+                |
+              </span><a id="i8cfvy" data-gjs-type="link" href="https://reliefconnection.com/contact.php" class="">Contact Us</a></div><br id="ioj9s7" data-gjs-type="default"><div id="i99xbf" data-gjs-type="div" class=""><span id="iyzaw6" data-gjs-type="text" class="">
+                Copyright 2023 reliefconnection.com by Consumers Advocate Group LLC
+              </span></div></div></div></div></div><!-- / Footer--><script id="i5156h">
+      var ringbaInjected = false;
+      function injectRingba() {
+        console.log("Injecting Ringba...");
+        // Create a new script element
+        var script = document.createElement("script");
+        // Set the src attribute of the script
+        script.src = "//b-js.ringba.com/CA1bdf0cff8b9b4045956d6b42cf092ff2";
+        // Set the async attribute to ensure the script loads asynchronously
+        script.async = true;
+        // Append the script to the head of the document
+        document.head.appendChild(script);
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          direction: "horizontal",
+          loop: false,
+          allowSlideNext: false,
+          allowSlidePrev: false,
+        }
+                               );
+        function addNextButtonListener(pageSelector) {
+          var buttons = document.querySelectorAll(
+            pageSelector + " .next-button"
+          );
+          buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+              swiper.allowSlideNext = true;
+              swiper.slideNext();
+              swiper.allowSlideNext = false;
+            }
+                                   );
+          }
+                         );
+        }
+        // Add event listeners for each page
+        addNextButtonListener("#page-1");
+        addNextButtonListener("#page-2");
+        addNextButtonListener("#page-3");
+        addNextButtonListener("#page-4");
+        // Helper function to stop all audios
+        function stopAllAudio() {
+          audio1.pause();
+          audio1.currentTime = 0;
+          audio2.pause();
+          audio2.currentTime = 0;
+          audio3.pause();
+          audio3.currentTime = 0;
+          audio4.pause();
+          audio4.currentTime = 0;
+        }
+        // Special behavior for page 1: play audio
+        var audio1 = new Audio("first.mp3");
+        var page1buttons = document.querySelectorAll("#page-1 .next-button");
+        page1buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            stopAllAudio();
+            audio1.play();
+          }
+                                 );
+        }
+                            );
+        // Special behavior for page 2: play audio
+        var audio2 = new Audio("sec.mp3");
+        var page2buttons = document.querySelectorAll("#page-2 .next-button");
+        page2buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            stopAllAudio();
+            audio2.play();
+          }
+                                 );
+        }
+                            );
+        // Special behavior for page 3: play audio
+        var audio3 = new Audio("last.mp3");
+        var page3buttons = document.querySelectorAll("#page-3 .next-button");
+        page3buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            stopAllAudio();
+            audio3.play();
+            addDataToURL(form_answers);
+            if (!ringbaInjected) {
+              ringbaInjected = true;
+              injectRingba();
+            }
+          }
+                                 );
+        }
+                            );
+        // Special behavior for page 4: play audio
+        var audio4 = new Audio("audio-4.mp3");
+        var page4buttons = document.querySelectorAll("#page-4 .next-button");
+        page4buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            addDataToURL(form_answers);
+            gtag_report_conversion();
+            addTagsToRingba(form_answers);
+            stopAllAudio();
+            audio4.play();
+          }
+                                 );
+        }
+                            );
+      }
+                               );
+    </script> 
+    
+    
+    <script type="text/javascript" landerlab-script="">const llQueryStrings=decodeURI(window.location.search).replace("?","").split("&").map(e=>e.split("=")).reduce((e,[t,n])=>(n&&(e[t]=n),e),{});const llRequestData = JSON.parse(document.cookie.match('(^|;)\\s*' + 'llRequestData' + '\\s*=\\s*([^;]+)')?.pop() || '{}'),replaceQsInHtml=(e,t)=>{[...document.body.querySelectorAll("*:not(script):not(noscript):not(style)")].forEach(({childNodes:[...n]})=>n.filter(({nodeType:e})=>e===document.TEXT_NODE).forEach(n=>n.textContent=n.textContent.replace(new RegExp([[e]],"gi"),t)));[...document.body.getElementsByTagName('a')].forEach(el=>{if(el.getAttribute('href')){el.setAttribute('href',el.getAttribute('href').replace(new RegExp([[e]],"gi"),t))}})};const llMacros = Object.assign(llRequestData, llQueryStrings);for(const e in llMacros){replaceQsInHtml(`\\[\\[${e}\\]\\]`,llMacros[e])}</script>
+    
+    <script src="js/scripts.js" landerlab-script=""></script>
+  
+<script src="https://track.landerlab.io/cf/p/65bb48c6950a400019a47032?lander_id=df27d2e23bf500eb010b2bc1a59b56d1&amp;uid=4b4edc2630fe75800ddc29a7b4070add&amp;variant_id=e46709aa58ba51019b4e6c1b23d9ae03"></script></body></html>
