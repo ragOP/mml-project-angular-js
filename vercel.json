@@ -1,7 +1,7 @@
 {
     "rewrites": [
       {
-        "source": "//debspanbn28",
+        "source": "/debspanbn28",
         "destination": "/index.html"
       },
       {
