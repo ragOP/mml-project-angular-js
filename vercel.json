@@ -1,0 +1,11 @@
+{
+    "rewrites": [
+      { "source": "/trumpq1/(.*)", "destination": "/$1" },
+ 
+      { "source": "/index.html", "destination": "/wow" }
+
+
+
+    ]
+  }
+  
