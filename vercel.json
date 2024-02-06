@@ -1,7 +1,7 @@
 {
     "rewrites": [
       {
-        "source": "/unique",
+        "source": "//debspanbn28",
         "destination": "/index.html"
       },
       {
