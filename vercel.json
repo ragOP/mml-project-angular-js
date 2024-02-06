@@ -1,11 +1,13 @@
 {
     "rewrites": [
-      { "source": "/trumpq1/(.*)", "destination": "/$1" },
- 
-      { "source": "/index.html", "destination": "/wow" }
-
-
-
+      {
+        "source": "/unique",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
     ]
   }
   
