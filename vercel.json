@@ -6,12 +6,9 @@
       },
       {
         "source": "/chat",
-        "destination": "chat/index.html"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
+        "destination": "chat/aa.html"
       }
+      
     ]
   }
   
