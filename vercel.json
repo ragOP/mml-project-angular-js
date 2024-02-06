@@ -5,6 +5,10 @@
         "destination": "/index.html"
       },
       {
+        "source": "/chat",
+        "destination": "chat/index.html"
+      },
+      {
         "source": "/(.*)",
         "destination": "/index.html"
       }
