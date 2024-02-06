@@ -6,7 +6,7 @@
       },
       {
         "source": "/chat",
-        "destination": "chat/aa.html"
+        "destination": "raw.html"
       }
       
     ]
